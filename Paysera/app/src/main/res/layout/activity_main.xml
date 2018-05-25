@@ -1,0 +1,167 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:id="@+id/tv_convertfrom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/tv_balance"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:text="Konvertuoti iš"
+        android:textAlignment="center"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <RadioGroup
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textAlignment="center"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/tv_convertfrom"
+        android:layout_marginTop="20dp"
+        android:layout_alignParentLeft="true"
+        android:layout_marginLeft="20dp"
+        android:orientation="horizontal"
+        android:id="@+id/rg_from">
+
+        <RadioButton
+            android:id="@+id/rb_EurFrom"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Eur" />
+
+        <RadioButton
+            android:id="@+id/rb_UsdFrom"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Usd" />
+
+        <RadioButton
+            android:id="@+id/rb_JpyFrom"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jpy" />
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tv_convertto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_from"
+        android:layout_marginTop="20dp"
+        android:layout_centerHorizontal="true"
+        android:text="Konvertuoti į"
+        android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <RadioGroup
+        android:id="@+id/rg_to"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/rg_from"
+        android:layout_alignStart="@+id/rg_from"
+        android:layout_below="@+id/tv_convertto"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="20dp"
+        android:orientation="horizontal"
+        android:textAlignment="center">
+
+        <RadioButton
+            android:id="@+id/rb_EurTo"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Eur" />
+
+        <RadioButton
+            android:id="@+id/rb_UsdTo"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Usd" />
+
+        <RadioButton
+            android:id="@+id/rb_JpyTo"
+            android:layout_width="67dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Jpy" />
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btn_convert"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginBottom="19dp"
+        android:text="Konvertuoti" />
+
+    <EditText
+        android:id="@+id/et_convert_amount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/rg_to"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="33dp"
+        android:ems="10"
+        android:inputType="numberDecimal" />
+
+    <TextView
+        android:id="@+id/tv_balance"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:textAlignment="center"
+        android:text="tekstas"
+        android:textAppearance="@android:style/TextAppearance.Material" />
+
+    <TextView
+        android:id="@+id/tv_kompaid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_balance"
+        android:layout_alignStart="@+id/tv_balance"
+        android:layout_below="@+id/et_convert_amount"
+        android:layout_marginTop="25dp"
+        android:text="Sumokėta komisinių:"
+        android:textAppearance="@android:style/TextAppearance.Material" />
+
+    <TextView
+        android:id="@+id/tv_Eurkom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_kompaid"
+        android:layout_alignStart="@+id/tv_kompaid"
+        android:layout_below="@+id/tv_kompaid"
+        android:text="TextView"
+        android:textAppearance="@android:style/TextAppearance.Material" />
+
+    <TextView
+        android:id="@+id/tv_Usdkom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_Eurkom"
+        android:layout_alignStart="@+id/tv_Eurkom"
+        android:layout_below="@+id/tv_Eurkom"
+        android:text="TextView"
+        android:textAppearance="@android:style/TextAppearance.Material" />
+
+    <TextView
+        android:id="@+id/tv_Jpykom"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignLeft="@+id/tv_Usdkom"
+        android:layout_alignStart="@+id/tv_Usdkom"
+        android:layout_below="@+id/tv_Usdkom"
+        android:text="TextView"
+        android:textAppearance="@android:style/TextAppearance.Material" />
+</RelativeLayout>
